@@ -41,7 +41,7 @@ const Product = () => {
             ))}
           </div>
           <div className='w-full h-full'>
-            {/* Main product image */}
+           
             <img
               className="h-[420px] rounded"
               src={selectedImage || "https://cdn.pixabay.com/photo/2021/09/07/07/11/joysticks-6603119_640.jpg"}
