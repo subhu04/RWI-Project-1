@@ -4,7 +4,7 @@ import Layout from "../../components/layout/Layout";
 const Checkout = () => {
     return (
         <Layout>
-        <div className=" flex-wrap md:flex  p-20">
+        <div className=" flex-wrap md:flex  m-[10px] md:m-[50px]">
             <div className="md:w-1/2 w-full">
                 <h1 className="text-2xl  mb-8">Billing Details</h1>
                 <form action="">

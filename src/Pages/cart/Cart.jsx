@@ -6,7 +6,7 @@ const Cart = () => {
   return (
     <>
       <Layout>
-        <div className="m-[50px]  ">
+        <div className="m-[10px]  md:m-[50px]  ">
           <div className="grid grid-cols-4  m-[20px]  p-[20px] borde rounded-[8px] shadow-md shadow-gray-500">
             <h1>Product</h1>
             <h1>Quantity</h1>

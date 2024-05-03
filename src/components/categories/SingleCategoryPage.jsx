@@ -217,6 +217,81 @@ const SingleCategoryPage = () => {
     name: 'MYEONG MATTE FINISH & GLITTER GEL NAIL PAINT',
     category:'fashion'
 },
+
+
+  {
+      src: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Product 1",
+      price: "$799",
+      name: "Samsung Galaxy S21 Ultra",
+      category: "mobile"
+  },
+  {
+      src: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=1567&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Product 2",
+      price: "$999",
+      name: "iPhone 13 Pro Max",
+      category: "mobile"
+  },
+  {
+      src: "https://images.unsplash.com/photo-1657797066015-311cb505b009?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Product 3",
+      price: "$899",
+      name: "Google Pixel 6 Pro",
+      category: "mobile"
+  },
+  {
+      src: "https://images.unsplash.com/photo-1658321466969-1c45400bb947?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Product 4",
+      price: "$699",
+      name: "OnePlus 9 Pro",
+      category: "mobile"
+  },
+  {
+      src: "https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Product 5",
+      price: "$749",
+      name: "Xiaomi Mi 11",
+      category: "mobile"
+  },
+  {
+      src: "https://images.unsplash.com/photo-1591884539376-42f1f0dc65c2?q=80&w=1485&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Product 6",
+      price: "$649",
+      name: "Huawei P50 Pro",
+      category: "mobile"
+  },
+  {
+      src: "https://www.mobiles4sale.com/pictures/default/lg-v60-thinq-5g-dual-screen/lg-v60-thinq-5g-dual-screen-pic-1.jpg",
+      alt: "Product 7",
+      price: "$579",
+      name: "LG V60 ThinQ",
+      category: "mobile"
+  },
+  {
+      src: "https://www.androidplanet.nl/wp-content/uploads/2021/09/sony-xperia-1-iii-review3.jpg",
+      alt: "Product 8",
+      price: "$499",
+      name: "Sony Xperia 1 III",
+      category: "mobile"
+  },
+  {
+      src: "https://motorolaroe.vtexassets.com/arquivos/ids/156575/motorola-edge-20-pro-pdp-render-8-Baltic-blue-gq89b9ir.png?v=637630881043330000",
+      alt: "Product 9",
+      price: "$479",
+      name: "Motorola Edge 20",
+      category: "mobile"
+  },
+  {
+      src: "https://dlcdnwebimgs.asus.com/gain/D551F7D4-8AC9-4299-A93D-3860DFC9D573/w250",
+      alt: "Product 10",
+      price: "$399",
+      name: "Asus ROG Phone 5",
+      category: "mobile"
+    }
+
+
+
     ]
     // Simulating fetching category products based on ID
     useEffect(() => {
