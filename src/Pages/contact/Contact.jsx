@@ -1,7 +1,26 @@
-import react from "react";
+import react,{useState} from "react";
 import Layout from "../../components/layout/Layout";
 
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+  });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
   return (
     <Layout>
     <div>
@@ -28,7 +47,7 @@ const Contact = () => {
                 <p class="mt-4 text-lg text-gray-600">
                   Our friendly team would love to hear from you.
                 </p>
-                <form action="" class="mt-8 space-y-4">
+                <form action="" class="mt-8 space-y-4" onSubmit={handleSubmit}>
                   <div class="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div class="grid w-full  items-center gap-1.5">
                       <label
@@ -40,6 +59,9 @@ const Contact = () => {
                       <input
                         class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                         type="text"
+                        name="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
                         id="first_name"
                         placeholder="First Name"
                       />
@@ -52,8 +74,11 @@ const Contact = () => {
                         Last Name
                       </label>
                       <input
-                        class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                        class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-black-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-600 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                         type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         id="last_name"
                         placeholder="Last Name"
                       />
@@ -70,6 +95,9 @@ const Contact = () => {
                       class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       type="text"
                       id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Email"
                     />
                   </div>
@@ -84,6 +112,9 @@ const Contact = () => {
                       class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       type="tel"
                       id="phone_number"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
                       placeholder="Phone number"
                     />
                   </div>
@@ -95,14 +126,17 @@ const Contact = () => {
                       Message
                     </label>
                     <textarea
-                      class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                      class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-500 dark:border-gray-700 dark:text-gray-500 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="Leave us a message"
-                      cols="3"
+                      cols="5"
                     ></textarea>
                   </div>
                   <button
-                    type="button"
+                    type="submit"
                     class="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
